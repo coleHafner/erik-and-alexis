@@ -1,13 +1,25 @@
 <template>
 	<div id="app">
-		<div v-if="!hideNav" class="top-bar">
-			This is stuff
-			<router-link to="/">Home</router-link>
-			<router-link to="/details">Details</router-link>
-			<router-link to="/gallery">Gallery</router-link>
-			<router-link to="/tour">Tour</router-link>
-			<router-link to="/rsvp">RSVP</router-link>
-		</div>
+		<v-nav v-if="!hideNav" v-bind:fixed="true">
+			<a href="" class="brand-logo left hide-on-med-and-down show-on-medium" style="float:left !important; position: relative;">This is stuff</a>
+			<ul class="right hide-on-med-and-down show-on-medium">
+				<li><router-link to="/">Home</router-link></li>
+				<li><router-link to="/details">Details</router-link></li>
+				<li><router-link to="/gallery">Gallery</router-link></li>
+				<li><router-link to="/tour">Tour</router-link></li>
+				<li><router-link to="/rsvp">RSVP</router-link></li> 
+			</ul>
+
+			<a href="" class="brand-logo hide-on-med-and-up" stlye="display:block;">Mobile Logo</a>
+			<v-icon medium v-dropdown:dropdown class="right hide-on-med-and-up">list</v-icon>
+			<v-dropdown id="dropdown">
+				<li><router-link to="/">Home</router-link></li>
+				<li><router-link to="/details">Details</router-link></li>
+				<li><router-link to="/gallery">Gallery</router-link></li>
+				<li><router-link to="/tour">Tour</router-link></li>
+				<li><router-link to="/rsvp">RSVP</router-link></li> 
+			</v-dropdown>
+		</v-nav>
 		<router-view></router-view>
 	</div>
 </template>
@@ -33,7 +45,6 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-	margin-top: 60px;
 }
 
 .top-bar {
