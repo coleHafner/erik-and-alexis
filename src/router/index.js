@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/home/page';
 import Tour from '@/components/tour/page';
 import Rsvp from '@/components/rsvp/page';
+import Story from '@/components/story/page';
+import Splash from '@/components/splash/page';
 import Details from '@/components/details/page';
 import Gallery from '@/components/gallery/page';
 
@@ -11,8 +12,13 @@ const router = new Router({
 	routes: [
 		{
 			path: '/',
-			name: 'Home',
-			component: Home,
+			name: 'Splash',
+			component: Splash,
+		},
+		{
+			path: '/our-story',
+			name: 'Our Story',
+			component: Story,
 		},
 		{
 			path: '/details',

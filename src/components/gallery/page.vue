@@ -1,6 +1,5 @@
-<template>
-	<div>
-		This is the gallery page...</div>
+<template lang="pug">
+	div This is the gallery page...
 </template>
 
 <script>

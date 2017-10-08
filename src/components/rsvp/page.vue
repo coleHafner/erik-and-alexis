@@ -1,6 +1,5 @@
-<template>
-	<div>
-		This is the RSVP page...</div>
+<template lang="pug">
+	div This is the RSVP page...
 </template>
 
 <script>
