@@ -1,25 +1,33 @@
 <template lang="pug">
-	#app
-		nav.nav-extended(v-if="!hideNav")
-			.nav-wrapper
-				a.brand-logo(href="#" style="display:block; min-height: 120px;")
+	main#app
+		nav.mobile-nav.valign-wrapper(v-show="showMobileNav")
+			a.brand-logo
+				h3.center-align Alexis and Erik
+			a(v-side-nav:demo="" class="left" href="#" style="margin-left: 10px;") 
+				i.material-icons(style="font-size: 40px") list
+		v-side-nav(id="demo" v-bind:fixed="true" v-show="showNav")
+			li.logo
+				// this will force a refresh for the home page, restoring the background image
+				a.center-align(href="/") 
 					img(src="./assets/cat-small-transparent-bg.png" alt="logo")
-			.nav-content
-				ul.tabs.tabs-transparent
-					li.tab(v-bind:class="{active: $route.fullPath === '/details'}")
-						router-link(to="/details" v-bind:class="{active: $route.fullPath === '/details'}") Wedding Details
+				.separator
+			li(v-bind:class="{active: $route.fullPath === '/details'}")
+				router-link(to="/details" v-bind:class="{active: $route.fullPath === '/details'}") Wedding Details
 
-					li.tab(v-bind:class="{active: $route.fullPath === '/gallery'}")
-						router-link(to="/gallery" v-bind:class="{active: $route.fullPath === '/gallery'}") Photo Gallery
+			li(v-bind:class="{active: $route.fullPath === '/gallery'}")
+				router-link(to="/gallery" v-bind:class="{active: $route.fullPath === '/gallery'}") Photo Gallery
 
-					li.tab(v-bind:class="{active: $route.fullPath === '/tour'}")
-						router-link(to="/tour" v-bind:class="{active: $route.fullPath === '/tour'}") Venue
+			li(v-bind:class="{active: $route.fullPath === '/tour'}")
+				router-link(to="/tour" v-bind:class="{active: $route.fullPath === '/tour'}") Tour
 
-					li.tab(v-bind:class="{active: $route.fullPath === '/our-story'}")
-						router-link(to="/our-story" v-bind:class="{active: $route.fullPath === '/our-story'}") Our Story
-						
-					li.tab(v-bind:class="{active: $route.fullPath === '/rsvp'}")
-						router-link(to="/rsvp" v-bind:class="{active: $route.fullPath === '/rsvp'}") RSVP
+			li(v-bind:class="{active: $route.fullPath === '/venue'}")
+				router-link(to="/venue" v-bind:class="{active: $route.fullPath === '/venue'}") Venue
+
+			li(v-bind:class="{active: $route.fullPath === '/our-story'}")
+				router-link(to="/our-story" v-bind:class="{active: $route.fullPath === '/our-story'}") Our Story
+				
+			li(v-bind:class="{active: $route.fullPath === '/rsvp'}")
+				router-link(to="/rsvp" v-bind:class="{active: $route.fullPath === '/rsvp'}") RSVP
 		transition(name="fade")
 			router-view
 </template>
@@ -27,12 +35,34 @@
 <script>
 export default {
 	name: 'app',
-	created() {
-		console.log(this.$route);
+	data() {
+		return {
+			viewportWidth: 0,
+		};
+	},
+	mounted() {
+		this.$nextTick(function () {
+			window.addEventListener('resize', this.setViewportWidth);
+			this.setViewportWidth();
+		});
+	},
+	beforeDestroy() {
+		window.removeEventListener('resize', this.setViewportWidth);
+	},
+	methods: {
+		setViewportWidth() {
+			this.viewportWidth = document.documentElement.clientWidth;
+		},
 	},
 	computed: {
-		hideNav() {
-			return this.$route.fullPath === '/';
+		showNav() {
+			return this.$route.fullPath !== '/';
+		},
+		showMobileNav() {
+			return (
+				this.showNav &&
+				this.viewportWidth <= 992
+			);
 		},
 	},
 };
@@ -40,14 +70,41 @@ export default {
 
 <style lang="scss">
 $roboto-font-path: '../static/materialize-css/fonts/roboto/';
+$great-vibes-font-path: '../static/materialize-css/fonts/great-vibes/';
 @import '../static/materialize-css/sass/materialize.scss';
 
 .container {
-	background-color: rgba(255,255,255,.33);
+	background-color: rgba(255,255,255, 1);
+	margin-left: 220px
 }
 
-nav {
-	background-color: $secondary-color;
+ .mobile-nav {
+	 min-height: 81px;
+ }
+
+.side-nav {
+	width: 200px;
+	background-color: $primary-color;
+	li {
+		&.logo {
+			a {
+				display: block;
+				height: 210px;
+			}
+
+			.separator {
+				width: 75%;
+				display: block;
+				margin: auto;
+				border-bottom: 1px dashed $secondary-color;
+				margin-bottom: 20px;
+			}
+		}
+
+		a {
+			color: #fff;
+		}
+	}
 	
 	.nav-content {
 		background-color: $primary-color;
@@ -74,4 +131,18 @@ nav {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
+
+@media only screen and (max-width : 992px) {
+   .container {
+     margin-left: auto;
+   }
+ }
+
+ @media only screen and (max-width : 540px) {
+	 .mobile-nav {
+		 h3 {
+			 font-size: 2rem;
+		 }
+	 }
+ }
 </style>

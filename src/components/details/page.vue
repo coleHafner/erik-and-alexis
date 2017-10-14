@@ -1,7 +1,7 @@
 <template lang="pug">
-	.container
+	.container.sidenav-offset
 		.col.s12.left-align
-			h3.center-align Welcome, wedding guests!
+			h3 Welcome, wedding guests!
 			p
 				| It is our pleasure to extend an invitation to join us in celebration of our marriage at Hanley Farm at
 				| 1053 Hanley Rd. in Central Point, Oregon, on June 16, 2018 at 4:00 p.m.
@@ -51,6 +51,7 @@ export default {
 
 <style lang="scss">
 html {
-	background: none;
+	background: none !important;
+	background-color: #fff !important;
 }
 </style>

@@ -2,6 +2,7 @@
 .container
 	.col.s12
 		h3 Our story
+		img.right(src="../../../static/gallery-pics/halloween.jpg")
 		p
 			| After a sweaty day of field work in summer 2014, Alexis arrived at an “after-hours business meeting for young 
 			| professionals” that Hannah, a colleague and mutual friend, had arranged at 7 Devils Brewery in Coos Bay, Oregon. 
@@ -55,5 +56,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+img {
+	max-width: 500px; 
+	margin:10px;
+	border-radius: 3px;
+}
 </style>
