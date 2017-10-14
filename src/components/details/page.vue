@@ -50,8 +50,4 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-	background: none !important;
-	background-color: #fff !important;
-}
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-	div This is the RSVP page...
+	.container This is the RSVP page...
 </template>
 
 <script>
@@ -12,8 +12,4 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-	background: none !important;
-	background-color: #fff !important;
-}
 </style>

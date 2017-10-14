@@ -19,18 +19,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
-html {
-	background: url(../../assets/splash-screen-1900.png) no-repeat center center fixed !important;
-	-webkit-backgorund-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-@media (max-width: 800px) {
-	h1 {
-		font-size: 3em;
-	}
+<style lang="scss" scoped>
+h1 {
+	margin-top: 0;
+	padding-top: 2.1rem;
 }
 </style>

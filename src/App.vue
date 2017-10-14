@@ -1,5 +1,5 @@
 <template lang="pug">
-	main#app
+	main(v-bind:class="bgClass")
 		nav.mobile-nav.valign-wrapper(v-show="showMobileNav")
 			a.brand-logo
 				h3.center-align Alexis and Erik
@@ -64,6 +64,11 @@ export default {
 				this.viewportWidth <= 992
 			);
 		},
+		bgClass() {
+			return this.$route.fullPath === '/'
+				? 'splash-style'
+				: 'non-splash-style';
+		},
 	},
 };
 </script>
@@ -73,8 +78,30 @@ $roboto-font-path: '../static/materialize-css/fonts/roboto/';
 $great-vibes-font-path: '../static/materialize-css/fonts/great-vibes/';
 @import '../static/materialize-css/sass/materialize.scss';
 
+main {
+	height: 100vh;
+
+	&.splash-style {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+
+.splash-style {
+	background: url(./assets/splash-screen-1900.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.non-splash-style {
+	background: none;
+	background-color: #fff;
+}
+
 .container {
-	background-color: rgba(255,255,255, 1);
+	background-color: #fff;
 	margin-left: 220px
 }
 

@@ -263,9 +263,6 @@
 						| Hiouchi, CA
 						br
 						| Ph: 707-458-3496
-
-			h3 The Redwoods (cont.)
-
 			p 
 				| To access Flint Ridge Campground from Klamath,
 				| CA, drive south 1 mile on U.S. 101 (over the Klamath
@@ -373,3 +370,6 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+</style>
