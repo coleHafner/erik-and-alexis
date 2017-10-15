@@ -8,9 +8,10 @@
 		v-side-nav(id="demo" v-bind:fixed="true" v-show="showNav")
 			li.logo
 				// this will force a refresh for the home page, restoring the background image
-				a.center-align(href="/") 
+				router-link.center-align(to="/") 
 					img(src="./assets/cat-small-transparent-bg.png" alt="logo")
-				.separator
+				.separator.center-align
+					h5 Alexis and Erik
 			li(v-bind:class="{active: $route.fullPath === '/details'}")
 				router-link(to="/details" v-bind:class="{active: $route.fullPath === '/details'}") Wedding Details
 
@@ -85,6 +86,81 @@ main {
 		margin-top: 0;
 		padding-top: 0;
 	}
+
+	img {
+		max-width: 500px;
+		max-height: 500px; 
+		margin: 10px;
+		border-radius: 3px;
+	}
+
+	.container {
+		background-color: #fff;
+		margin-left: 220px;
+		padding-bottom: 50px;
+	}
+
+	.mobile-nav {
+		min-height: 81px;
+	}
+
+	.side-nav {
+		width: 200px;
+		background-color: $primary-color;
+		li {
+			&.logo {
+				a {
+					display: block;
+					height: 210px;
+				}
+
+				.separator {
+					width: 85%;
+					display: block;
+					margin: auto;
+					border-bottom: 1px dashed $secondary-color;
+					border-top: 1px dashed $secondary-color;
+					margin-bottom: 15px;
+					margin-top: 15px;
+					color: #000;
+					padding-top: 7px;
+					padding-bottom: 7px;
+				}
+			}
+
+			a {
+				color: #fff;
+			}
+		}
+		
+		.nav-content {
+			background-color: $primary-color;
+		}
+	}
+
+
+	.hollow {
+		background-color: transparent;
+		border: 1px solid #000;
+		color: #000;
+		margin-right: 15px;
+	}
+
+
+
+	@media only screen and (max-width : 992px) {
+		.container {
+			margin-left: auto;
+		}
+	}
+
+	@media only screen and (max-width : 540px) {
+		.mobile-nav {
+			h3 {
+				font-size: 2rem;
+			}
+		}
+	}
 }
 
 .splash-style {
@@ -100,52 +176,6 @@ main {
 	background-color: #fff;
 }
 
-.container {
-	background-color: #fff;
-	margin-left: 220px
-}
-
- .mobile-nav {
-	 min-height: 81px;
- }
-
-.side-nav {
-	width: 200px;
-	background-color: $primary-color;
-	li {
-		&.logo {
-			a {
-				display: block;
-				height: 210px;
-			}
-
-			.separator {
-				width: 75%;
-				display: block;
-				margin: auto;
-				border-bottom: 1px dashed $secondary-color;
-				margin-bottom: 20px;
-			}
-		}
-
-		a {
-			color: #fff;
-		}
-	}
-	
-	.nav-content {
-		background-color: $primary-color;
-	}
-}
-
-
-.hollow {
-	background-color: transparent;
-	border: 1px solid #000;
-	color: #000;
-	margin-right: 15px;
-}
-
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .5s;
@@ -158,18 +188,4 @@ main {
 .fade-enter, .fade-leave-active {
   opacity: 0
 }
-
-@media only screen and (max-width : 992px) {
-   .container {
-     margin-left: auto;
-   }
- }
-
- @media only screen and (max-width : 540px) {
-	 .mobile-nav {
-		 h3 {
-			 font-size: 2rem;
-		 }
-	 }
- }
 </style>

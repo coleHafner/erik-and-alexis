@@ -2,6 +2,7 @@
 	.container.sidenav-offset
 		.col.s12.left-align
 			h3 Welcome, wedding guests!
+			img.right(src="../../../static/gallery-pics/birding-at-tahkenitch.jpg")
 			p
 				| It is our pleasure to extend an invitation to join us in celebration of our marriage at Hanley Farm at
 				| 1053 Hanley Rd. in Central Point, Oregon, on June 16, 2018 at 4:00 p.m.
@@ -15,7 +16,9 @@
 				| dancing; beer, wine, and other non-alcoholic drinks will be provided.
 
 			p
-				| Please, use the RSVP tab on this website to RSVP before May 26th, 2018.
+				| Please, use the 
+				router-link(to="/rsvp") RSVP page 
+				| on this website to RSVP before May 26th, 2018.
 
 			p
 				| We would like to end on a few notes of gratitude:
@@ -37,7 +40,7 @@
 			p
 				| We look forward to seeing all of you at the party!
 			p 
-				| - Erik and Alexis
+				h6 - Erik and Alexis
 </template>
 
 <script>
@@ -49,5 +52,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
+ul {
+	> li {
+		list-style: disc;
+	}
+	li {
+		margin-bottom: 25px;
+		margin-left: 50px;
+	}
+}
 </style>

@@ -1,7 +1,7 @@
 <template lang="pug">
 	.container
 		.col.s12
-			h3 Hanely Farm
+			h3 Hanley Farm
 			
 			p
 				| Hanley Farm is a historic farmstead on Jackson Creek about two miles northeast of Jacksonville, 

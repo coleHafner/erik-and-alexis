@@ -57,9 +57,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
-	max-width: 500px; 
-	margin:10px;
-	border-radius: 3px;
-}
 </style>

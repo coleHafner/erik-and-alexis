@@ -5,7 +5,7 @@
 		h1.hide-on-med-and-up Alexis and Erik
 		h5 Saturday, June 16th, 2018
 		router-link.btn-large.hollow(to="/details") Enter Site
-		router-link.btn-large(to="/rsvp") RSVP Now
+		router-link.btn-large.hollow(to="/rsvp") RSVP Now
 </template>
 
 <script>
