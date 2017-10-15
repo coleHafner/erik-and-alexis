@@ -121,8 +121,9 @@
 					| Drive time to Crater Lake from Medford is approximately 1 hr and 30 min.
 					| Click the link below for information to help you make the most of your visit to Oregon's only national park:
 
-				a(target="_blank" href="https://www.nps.gov/crla/learn/news/upload/Crater-Lake-Reflections-Summer-Fall-2015-Low-Res-3.pdf") 
-					| National parks link
+				p
+					a(target="_blank" href="https://www.nps.gov/crla/learn/news/upload/Crater-Lake-Reflections-Summer-Fall-2015-Low-Res-3.pdf") 
+						| Crater Lake Facts
 
 				iframe(width="560" height="315" src="https://www.youtube.com/embed/B1yefXnf8o8" frameborder="0" allowfullscreen)
 			#s-o-vits
