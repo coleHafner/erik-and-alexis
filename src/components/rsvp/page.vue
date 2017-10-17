@@ -1,6 +1,6 @@
 <template lang="pug">
 	.container
-		// h3.center-align RSVP
+b		// h3.center-align RSVP
 		.row
 			.col.s2
 				| &nbsp;
