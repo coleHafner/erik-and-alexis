@@ -47,7 +47,6 @@ export default {
 	},
 	methods: {
 		generateClassname(pic) {
-			console.log('paaaac', pic);
 			return pic
 				? pic.split('.')[0]
 				: 'nope';
