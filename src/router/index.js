@@ -7,6 +7,7 @@ import Venue from '@/components/venue/page';
 import Splash from '@/components/splash/page';
 import Details from '@/components/details/page';
 import Gallery from '@/components/gallery/page';
+import Registry from '@/components/registry/page';
 
 
 Vue.use(Router);
@@ -41,6 +42,11 @@ const router = new Router({
 			path: '/venue',
 			name: 'Venue',
 			component: Venue,
+		},
+		{
+			path: '/registry',
+			name: 'Gift Registry',
+			component: Registry,
 		},
 		{
 			path: '/rsvp',

@@ -1,8 +1,9 @@
 <template lang="pug">
+.venue-page
 	.container
 		.col.s12
 			h3 Hanley Farm
-			
+			.hero
 			p
 				| Hanley Farm is a historic farmstead on Jackson Creek about two miles northeast of Jacksonville, 
 				| Oregon. For more than a century, the Farm was owned and operated entirely by Hanley women, most 
@@ -57,5 +58,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.hero {
+	height: 350px;
+	width: 100%;
+	background: url(../../assets/hanley-barn.jpg) center center no-repeat;
+	background-size: cover;
+	background-color: #fff;
+}
 </style>

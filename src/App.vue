@@ -24,6 +24,9 @@
 			li(v-bind:class="{active: $route.fullPath === '/venue'}")
 				router-link(to="/venue" v-bind:class="{active: $route.fullPath === '/venue'}") Venue
 
+			li(v-bind:class="{active: $route.fullPath === '/registry'}")
+				router-link(to="/registry" v-bind:class="{active: $route.fullPath === '/registry'}") Gift Registry
+
 			li(v-bind:class="{active: $route.fullPath === '/our-story'}")
 				router-link(to="/our-story" v-bind:class="{active: $route.fullPath === '/our-story'}") Our Story
 				
@@ -164,7 +167,7 @@ main {
 }
 
 .splash-style {
-	background: url(./assets/splash-screen-1900.png) no-repeat center center fixed;
+	background: url(./assets/splash-screen-dam.jpeg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

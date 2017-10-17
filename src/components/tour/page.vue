@@ -13,6 +13,8 @@
 			#j-state
 				h4 The Mythical State of Jefferson
 
+				img.right(src="../../assets/state-of-jefferson-flag.png")
+
 				p 
 					| For West is where we all plan to go some day. It is where you go when the land gives out and the old-field pines encroach. 
 					| It is where you go when you get the letter saying: Flee, all is discovered. It is where you go when you look down at the blade 
@@ -129,6 +131,8 @@
 			#s-o-vits
 				h4 Southern Oregon Viticulture
 
+				img.right(src="../../assets/wine-estate.jpg")
+
 				p
 					| The story of Oregon wine no longer begins and ends with
 					| Willamette Valley Pinot Noir, as many of the state’s most exciting
@@ -192,6 +196,8 @@
 
 			#redwoods
 				h4 The Redwoods
+
+				img.left(src="../../assets/redwoods-howland-hill.jpg")
 
 				p
 					| “Time has a different quality in a forest, a different kind of flow. Time moves in circles, and events are linked, even if it's not
@@ -299,7 +305,9 @@
 					| 3 hrs.
 
 			#caves
-				h4 Oregon Caves National Momument
+				h4 Oregon Caves National Monument
+
+				img.right(src="../../assets/caves-treehouse.jpg")
 
 				p
 					| Nestled deep in the Illinois River
@@ -310,6 +318,7 @@
 					| from the ancient forest above
 					| dissolved the marble below, creating
 					| the "Marble Halls of Oregon."
+
 				p 
 					| Exploring the passages of
 					| the caves has been a tradition
@@ -345,6 +354,8 @@
 
 			#o-coast
 				h4 The Oregon Coast
+
+				img.left(src="../../assets/coast-thors-well.jpg")
 
 				p 
 					| “Ocean in view! O! The joy!”
