@@ -2,7 +2,7 @@
 	.container.sidenav-offset
 		.col.s12.left-align
 			h3 Welcome, wedding guests!
-			img.right(src="../../../static/gallery-pics/birding-at-tahkenitch.jpg")
+			.hero
 			p
 				| It is our pleasure to extend an invitation to join us in celebration of our marriage at Hanley Farm at
 				| 1053 Hanley Rd. in Central Point, Oregon, on June 16, 2018 at 4:00 p.m.
@@ -62,5 +62,13 @@ ul {
 		margin-bottom: 25px;
 		margin-left: 50px;
 	}
+}
+
+.hero {
+	height: 350px;
+	width: 100%;
+	background: url(../../assets/splash-screen-dam.jpeg) top center no-repeat;
+	background-size: cover;
+	background-color: #fff;
 }
 </style>

@@ -15,22 +15,22 @@
 			li(v-bind:class="{active: $route.fullPath === '/details'}")
 				router-link(to="/details" v-bind:class="{active: $route.fullPath === '/details'}") Wedding Details
 
+			li(v-bind:class="{active: $route.fullPath === '/registry'}")
+				router-link(to="/registry" v-bind:class="{active: $route.fullPath === '/registry'}") Gift Registry
+
+			li(v-bind:class="{active: $route.fullPath === '/venue'}")
+				router-link(to="/venue" v-bind:class="{active: $route.fullPath === '/venue'}") Venue
+
+			li(v-bind:class="{active: $route.fullPath === '/our-story'}")
+				router-link(to="/our-story" v-bind:class="{active: $route.fullPath === '/our-story'}") Our Story
+
 			li(v-bind:class="{active: $route.fullPath === '/gallery'}")
 				router-link(to="/gallery" v-bind:class="{active: $route.fullPath === '/gallery'}") Photo Gallery
 
 			li(v-bind:class="{active: $route.fullPath === '/tour'}")
 				router-link(to="/tour" v-bind:class="{active: $route.fullPath === '/tour'}") Tour
-
-			li(v-bind:class="{active: $route.fullPath === '/venue'}")
-				router-link(to="/venue" v-bind:class="{active: $route.fullPath === '/venue'}") Venue
-
-			li(v-bind:class="{active: $route.fullPath === '/registry'}")
-				router-link(to="/registry" v-bind:class="{active: $route.fullPath === '/registry'}") Gift Registry
-
-			li(v-bind:class="{active: $route.fullPath === '/our-story'}")
-				router-link(to="/our-story" v-bind:class="{active: $route.fullPath === '/our-story'}") Our Story
 				
-			li(v-bind:class="{active: $route.fullPath === '/rsvp'}")
+			li.rsvp(v-bind:class="{active: $route.fullPath === '/rsvp'}")
 				router-link(to="/rsvp" v-bind:class="{active: $route.fullPath === '/rsvp'}") RSVP
 		transition(name="fade")
 			router-view
@@ -167,7 +167,7 @@ main {
 }
 
 .splash-style {
-	background: url(./assets/splash-screen-dam.jpeg) no-repeat center center fixed;
+	background: url(./assets/splash-screen-coast.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
