@@ -11,6 +11,9 @@
 <script>
 export default {
 	name: 'vue-registry-page',
+	created() {
+		document.title = `Gift Registry | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {};
 	},

@@ -58,6 +58,9 @@
 <script>
 export default {
 	name: 'vue-rsvp-page',
+	created() {
+		document.title = `RSVP | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {
 			message: '',
@@ -105,7 +108,7 @@ export default {
 			this.form.phone = this.form.phone || '';
 
 			// submit...
-			this.$http.post('http://rsvp-me.dev/api/rsvps', this.form)
+			this.$http.post(`${process.env.RSVP_BASE_URL}/api/rsvps`, this.form)
 				.then(() => {
 					// reset form
 					this.form.totalChildren = '';

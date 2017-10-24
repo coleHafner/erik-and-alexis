@@ -10,6 +10,9 @@
 <script>
 export default {
 	name: 'vue-gallery-page',
+	created() {
+		document.title = `Photo Gallery | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {
 			path: '../../static/gallery-pics',

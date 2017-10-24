@@ -52,6 +52,9 @@
 <script>
 export default {
 	name: 'vue-venue-page',
+	created() {
+		document.title = `Wedding Venue | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {};
 	},

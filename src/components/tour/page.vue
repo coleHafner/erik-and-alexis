@@ -395,6 +395,9 @@
 <script>
 export default {
 	name: 'vue-tour-page',
+	created() {
+		document.title = `Tour Oregon | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {};
 	},

@@ -46,6 +46,9 @@
 <script>
 export default {
 	name: 'vue-details-page',
+	created() {
+		document.title = `Wedding Details | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {};
 	},

@@ -11,6 +11,9 @@
 <script>
 export default {
 	name: 'vue-splash-page',
+	created() {
+		document.title = `Welcome | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {
 			msg: 'Welcome to Your Vue.js App',

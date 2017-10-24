@@ -50,6 +50,9 @@
 <script>
 export default {
 	name: 'vue-story-page',
+	created() {
+		document.title = `Our Story | ${process.env.SITE_NAME}`;
+	},
 	data() {
 		return {};
 	},
