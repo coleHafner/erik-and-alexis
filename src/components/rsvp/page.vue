@@ -39,6 +39,13 @@
 							v-icon(prefix="") child_care
 							v-text-input#total-children(name="totalChildren" v-model="form.totalChildren")
 							label(for="total-children") Total Children (10 and under)
+
+				.row(v-show="form.amAttending")
+					.col.s12
+						.input-field
+							v-icon(prefix="") local_phone
+							v-text-input#phone(name="phone" v-model="form.phone")
+							label(for="phone") Contact Phone Number
 			.col.s2
 				| &nbsp;
 		.row
@@ -80,14 +87,22 @@ export default {
 				return false;
 			}
 
-			if (this.form.amAttending && !this.form.totalAdults) {
-				this.message = 'Please specify the number of adults in your party';
-				return false;
+			if (this.form.amAttending) {
+				if (!this.form.totalAdults) {
+					this.message = 'Please specify the number of adults in your party';
+					return false;
+				}
+
+				if (!this.form.phone) {
+					this.message = 'Please specify your phone number.';
+					return false;
+				}
 			}
 
 			// set default values
 			this.form.totalAdults = this.form.totalAdults || 0;
 			this.form.totalChildren = this.form.totalChildren || 0;
+			this.form.phone = this.form.phone || '';
 
 			// submit...
 			this.$http.post('http://rsvp-me.dev/api/rsvps', this.form)
@@ -96,6 +111,7 @@ export default {
 					this.form.totalChildren = '';
 					this.form.totalAdults = '';
 					this.form.partyName = '';
+					this.form.phone = '';
 					this.form.amAttending = false;
 
 					this.success = true;
