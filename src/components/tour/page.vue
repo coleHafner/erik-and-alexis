@@ -4,17 +4,31 @@
 			h3 The Wonders of Oregon
 			v-tabs
 				v-tab(target="#j-state") State 51
+				v-tab(target="#virtual-tour") Tour
 				v-tab(target="#c-lake") Lakes
 				v-tab(target="#s-o-vits") Wine
 				v-tab(target="#redwoods") Trees
 				v-tab(target="#caves") Caves
 				v-tab(target="#o-coast") Ocean
 
+			#virtual-tour
+				h4 Virtual Tour
+				p
+					| Looking for some things to do while you're here? Check out the map below.
+				iframe(
+					src="http://geo.maps.arcgis.com/apps/webappviewer/index.html?id=3cacf01ce8354d578676012d83475a3e" 
+					name="frame1" 
+					scrolling="auto" 
+					frameborder="no" 
+					align="center" 
+					height = "700px" 
+					width = "100%"
+				)
+
 			#j-state
 				h4 The Mythical State of Jefferson
 
 				img.right(src="../../assets/state-of-jefferson-flag.png")
-
 				p 
 					| For West is where we all plan to go some day. It is where you go when the land gives out and the old-field pines encroach. 
 					| It is where you go when you get the letter saying: Flee, all is discovered. It is where you go when you look down at the blade 
@@ -407,7 +421,7 @@ export default {
 <style lang="scss" scoped>
 	ul.tabs {
 		li {
-			width: 16.25%;
+			width: 14.28%;
 			a {
 				font-size: 8px;
 			}

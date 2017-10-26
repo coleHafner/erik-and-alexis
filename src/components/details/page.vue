@@ -4,8 +4,10 @@
 			h3 Welcome, wedding guests!
 			.hero
 			p
-				| It is our pleasure to extend an invitation to join us in celebration of our marriage at Hanley Farm at
-				| 1053 Hanley Rd. in Central Point, Oregon, on June 16, 2018 at 4:00 p.m.
+				| It is our pleasure to extend an invitation to join us in celebration of our marriage at 
+				b Hanley Farm - 1053 Hanley Rd. in Central Point, Oregon 
+				| on 
+				b June 16, 2018 at 4:00 p.m.
 			p
 				| Please, keep in mind that we are planning an outdoor ceremony and reception. We recommend leaving the formal wear and high
 				| heels at home, instead opting for garden party attire. Please, dress in layers as summertime temperatures in Rogue Valley
@@ -18,7 +20,8 @@
 			p
 				| Please, use the 
 				router-link(to="/rsvp") RSVP page 
-				| on this website to RSVP before May 26th, 2018.
+				| on this website to 
+				b RSVP before May 26th, 2018.
 
 			p
 				| We would like to end on a few notes of gratitude:
